@@ -20,6 +20,7 @@ $enable-colors-hack: true;
 @import "dark/functions";
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
+@import "maps";
 @import "mixins";
 @import "dark/mixins-2";  // !!!! fix for issue #32
 @import "utilities";

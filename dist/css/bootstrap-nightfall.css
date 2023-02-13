@@ -1,5 +1,5 @@
 /*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Bootstrap v5.2.2 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -63,9 +63,8 @@
 }
 
 hr {
-  color: #fafafa;
-  background-color: currentColor;
-  opacity: 0.1;
+  border-top: 1px solid;
+  opacity: 0.25;
 }
 
 mark {
@@ -122,7 +121,7 @@ caption {
 .table {
   --bs-table-color: #e1e1e1;
   --bs-table-bg: transparent;
-  --bs-table-border-color: #515151;
+  --bs-table-border-color: rgba(255, 255, 255, 0.15);
   --bs-table-accent-bg: transparent;
   --bs-table-striped-color: #e1e1e1;
   --bs-table-striped-bg: rgba(250, 250, 250, 0.05);
@@ -131,10 +130,11 @@ caption {
   --bs-table-hover-color: #e1e1e1;
   --bs-table-hover-bg: rgba(250, 250, 250, 0.075);
   color: #e1e1e1;
-  border-color: #515151;
+  border-color: rgba(255, 255, 255, 0.15);
 }
-.table > :not(:first-child) {
-  border-top: 2px solid currentColor;
+
+.table-group-divider {
+  border-top: 2px solid currentcolor;
 }
 
 .table-primary {
@@ -996,6 +996,7 @@ caption {
 
 .dropdown-divider {
   border-top: 1px solid rgba(250, 250, 250, 0.15);
+  opacity: 1;
 }
 
 .dropdown-item {
@@ -1266,72 +1267,72 @@ caption {
 }
 
 .alert-primary {
-  color: #738ca5;
-  background-color: #1c2d40;
-  border-color: #21364c;
+  --bs-alert-color: #738ca5;
+  --bs-alert-bg: #1c2d40;
+  --bs-alert-border-color: #21364c;
 }
 .alert-primary .alert-link {
   color: #5c7084;
 }
 
 .alert-secondary {
-  color: #919191;
-  background-color: #313131;
-  border-color: #3b3b3b;
+  --bs-alert-color: #919191;
+  --bs-alert-bg: #313131;
+  --bs-alert-border-color: #3b3b3b;
 }
 .alert-secondary .alert-link {
   color: #747474;
 }
 
 .alert-success {
-  color: #4dd0af;
-  background-color: #005e46;
-  border-color: #007154;
+  --bs-alert-color: #4dd0af;
+  --bs-alert-bg: #005e46;
+  --bs-alert-border-color: #007154;
 }
 .alert-success .alert-link {
   color: #3ea68c;
 }
 
 .alert-info {
-  color: #5dbecd;
-  background-color: #0c515c;
-  border-color: #0e616e;
+  --bs-alert-color: #5dbecd;
+  --bs-alert-bg: #0c515c;
+  --bs-alert-border-color: #0e616e;
 }
 .alert-info .alert-link {
   color: #4a98a4;
 }
 
 .alert-warning {
-  color: #f7ba59;
-  background-color: #7a4e09;
-  border-color: #925e0b;
+  --bs-alert-color: #f7ba59;
+  --bs-alert-bg: #7a4e09;
+  --bs-alert-border-color: #925e0b;
 }
 .alert-warning .alert-link {
   color: #c69547;
 }
 
 .alert-danger {
-  color: #ee8277;
-  background-color: #74261e;
-  border-color: #8b2e24;
+  --bs-alert-color: #ee8277;
+  --bs-alert-bg: #74261e;
+  --bs-alert-border-color: #8b2e24;
 }
 .alert-danger .alert-link {
   color: #be685f;
 }
 
 .alert-light {
-  color: #bbbbbb;
-  background-color: #4f4f4f;
-  border-color: #5f5f5f;
+  --bs-alert-color: #bbbbbb;
+  --bs-alert-bg: #4f4f4f;
+  --bs-alert-border-color: #5f5f5f;
 }
 .alert-light .alert-link {
   color: #969696;
 }
 
 .alert-dark {
-  color: #767676;
-  background-color: #1e1e1e;
-  border-color: #232323;
+  --bs-alert-color: #767676;
+  --bs-alert-bg: #1e1e1e;
+  --bs-alert-border-color: #232323;
 }
 .alert-dark .alert-link {
   color: #5e5e5e;
@@ -1344,18 +1345,6 @@ caption {
 .progress-bar {
   color: #111;
   background-color: #375a7f;
-}
-
-.list-group-item-action {
-  color: #b1b1b1;
-}
-.list-group-item-action:hover, .list-group-item-action:focus {
-  color: #b1b1b1;
-  background-color: #2f2f2f;
-}
-.list-group-item-action:active {
-  color: #e1e1e1;
-  background-color: #3b3b3b;
 }
 
 .list-group-item {
@@ -1541,11 +1530,11 @@ caption {
 }
 
 .modal-header {
-  border-bottom: 1px solid #515151;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .modal-footer {
-  border-top: 1px solid #515151;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .tooltip {
@@ -1712,7 +1701,7 @@ caption {
 }
 
 .placeholder {
-  background-color: currentColor;
+  background-color: currentcolor;
   opacity: 0.5;
 }
 
@@ -1733,64 +1722,64 @@ caption {
 }
 
 .link-primary {
-  color: #375a7f;
+  color: #375a7f !important;
 }
 .link-primary:hover, .link-primary:focus {
-  color: #2c4866;
+  color: #2c4866 !important;
 }
 
 .link-secondary {
-  color: #626262;
+  color: #626262 !important;
 }
 .link-secondary:hover, .link-secondary:focus {
-  color: #4e4e4e;
+  color: #4e4e4e !important;
 }
 
 .link-success {
-  color: #00bc8c;
+  color: #00bc8c !important;
 }
 .link-success:hover, .link-success:focus {
-  color: #33c9a3;
+  color: #33c9a3 !important;
 }
 
 .link-info {
-  color: #17a2b8;
+  color: #17a2b8 !important;
 }
 .link-info:hover, .link-info:focus {
-  color: #128293;
+  color: #128293 !important;
 }
 
 .link-warning {
-  color: #f39c12;
+  color: #f39c12 !important;
 }
 .link-warning:hover, .link-warning:focus {
-  color: #f5b041;
+  color: #f5b041 !important;
 }
 
 .link-danger {
-  color: #e74c3c;
+  color: #e74c3c !important;
 }
 .link-danger:hover, .link-danger:focus {
-  color: #b93d30;
+  color: #b93d30 !important;
 }
 
 .link-light {
-  color: #9e9e9e;
+  color: #9e9e9e !important;
 }
 .link-light:hover, .link-light:focus {
-  color: #7e7e7e;
+  color: #7e7e7e !important;
 }
 
 .link-dark {
-  color: #3b3b3b;
+  color: #3b3b3b !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: #2f2f2f;
+  color: #2f2f2f !important;
 }
 
 .vr {
-  background-color: currentColor;
-  opacity: 0.1;
+  background-color: currentcolor;
+  opacity: 0.25;
 }
 
 .shadow {
@@ -1806,23 +1795,23 @@ caption {
 }
 
 .border {
-  border: 1px solid #515151 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .border-top {
-  border-top: 1px solid #515151 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .border-end {
-  border-right: 1px solid #515151 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #515151 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .border-start {
-  border-left: 1px solid #515151 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
 .border-primary {

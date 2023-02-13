@@ -87,7 +87,7 @@
     "prefers-color-scheme"
   ],
   "dependencies": {
-    "bootstrap": "~5.1.3"
+    "bootstrap": "5.2.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.25.0",

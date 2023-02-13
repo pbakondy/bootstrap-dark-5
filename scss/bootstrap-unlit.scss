@@ -16,6 +16,7 @@
 @import "variables";  // defaults are here
 @import "variables-alt";  // dark color set is here
 @import "dark/variables-patch-for-unlit";  // temporary development patch to map new vars to existing codebase
+@import "maps";
 @import "mixins";
 @import "dark/mixins";
 @import "utilities";
